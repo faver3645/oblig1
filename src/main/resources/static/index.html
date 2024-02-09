@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="java.js"></script>
+</head>
+<body>
+
+<h1>Bestilling av kinobiletter</h1>
+
+<table>
+    <tr><td style="font-size: 18px; font-weight: bolder">Velg film:</td>
+        <td><select id="films">
+            <option value="" disabled selected>Velg film her</option>
+            <option>Wonka</option>
+            <option>Barbie</option>
+            <option>Oppenheimer</option>
+            <option>The Creator</option>
+            <option>The Whale</option>
+            <option>Joker</option>
+            <option>Saltburn</option>
+            <option>Jaws</option>
+            <option>Parasitt</option>
+        </select>
+        </td></tr>
+</table>
+<br>
+
+<table>
+    <tr><td style="font-size: 18px; font-weight: bolder;">Antall</td>
+        <td><input type="text" style="width: 25px" id="antall"/></td></tr>
+</table>
+<br>
+
+<table>
+
+    <tr><td style="font-size: 18px; font-weight: bolder;">Fornavn</td>
+        <td><input type="text" id="fornavn"/></td></tr>
+
+    <tr><td style="font-size: 18px; font-weight: bolder;">Etternavn</td>
+        <td><input type="text" id="etternavn"/></td></tr>
+
+    <tr><td style="font-size: 18px; font-weight: bolder;">Telefonnr</td>
+        <td><input type="text" id="telefonnr"/></td></tr>
+
+    <tr><td style="font-size: 18px; font-weight: bolder;">Epost</td>
+        <td><input type="text" id="epost"/></td></tr>
+</table>
+<button onclick="lagreIArray()">Kjøp billett</button>
+<h2>Alle billetter</h2>
+<div id="output"></div>
+<br>
+<button onclick="slettBillett()">Slett alle billettene</button>
+</body>
+</html>
