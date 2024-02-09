@@ -90,14 +90,14 @@ function lagreIArray(){
         array.push(billett);
 
         ut =  "<table><tr>" +
-            "<th>Film</th><th>Antall</th><th>Fornavn</th><th>Etternavn" +
-            "</th><th>Telefonnr</th><th>Epost</th>" +
+            "<th>Film</th><th>Antall</th><th>&nbsp;&nbsp;Fornavn</th><th>&nbsp;&nbsp;Etternavn" +
+            "</th><th>&nbsp;&nbsp;Telefonnr</th><th>Epost</th>" +
             "</tr>";
         for(let b of array){
             ut+="<tr>";
-            ut += "<td>"+b.film+"</td><td>"+" "+b.antall+
+            ut += "<td>"+b.film+"</td><td>"+" "+"&nbsp;&nbsp;"+b.antall+
                 "</td><td>"+b.fornavn+"</td><td>"+b.etternavn+"</td><td>"+b.telefonnr+"</td>" +
-                "<td>"+b.epost+"</td>";
+                "<td>"+"&nbsp;&nbsp;"+b.epost+"</td>";
             ut+="</tr>";
         }
         let output = document.getElementById("output");
