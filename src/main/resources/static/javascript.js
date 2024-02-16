@@ -9,7 +9,7 @@ function valideringInput(){
 
     let gyldig = true;
 
-    if (film === ""){
+    if (!film.trim()){
         let ut = document.getElementById("filmUt");
         ut.innerHTML = "Velg en Film!";
         ut.style.color = "red";
@@ -49,19 +49,20 @@ function valideringInput(){
         document.getElementById("etternavnUt").innerHTML = "";
     }
 
-    if(!telefonnr.trim()){
+    const telefonRegex = /^\d{8}$/;
+    if(!telefonRegex.test(telefonnr.trim())){
         let ut = document.getElementById("telefonnrUt");
-        ut.innerHTML = "Skriv inn noe i Telefonnr!";
+        ut.innerHTML = "Ugyldig telefonnr!";
         ut.style.color = "red";
         gyldig = false;
     }
     else {
         document.getElementById("telefonnrUt").innerHTML = "";
     }
-
-    if(!epost.trim()){
+    const epostRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if(!epostRegex.test(epost.trim())){
         let ut = document.getElementById("epostUt");
-        ut.innerHTML = "Skriv inn noe i Epost!";
+        ut.innerHTML = "Ugyldig Epost!";
         ut.style.color = "red";
         gyldig = false;
     }
@@ -96,7 +97,7 @@ function lagreIArray(){
         for(let b of array){
             ut+="<tr>";
             ut += "<td>"+b.film+"</td><td>"+" "+"&nbsp;&nbsp;"+b.antall+
-                "</td><td>"+b.fornavn+"</td><td>"+b.etternavn+"</td><td>"+b.telefonnr+"</td>" +
+                "</td><td>"+"&nbsp;&nbsp;"+b.fornavn+"</td><td>"+"&nbsp;&nbsp;"+b.etternavn+"</td><td>"+"&nbsp;&nbsp;"+b.telefonnr+"</td>" +
                 "<td>"+"&nbsp;&nbsp;"+b.epost+"</td>";
             ut+="</tr>";
         }
